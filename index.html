@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Maceteiro 2026 - Painel Digital</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #1a252f;
+            background-color: #f4f6f8;
+            background-image: url('PRM11001 Imagem.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50%;
+            background-attachment: fixed;
+            font-size: 14px;
+            line-height: 1.4;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Opacidade da camada reduzida para 35% para a imagem de fundo aparecer muito mais nítida */
+        .overlay {
+            background-color: rgba(244, 246, 248, 0.35);
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .header-banner {
+            background-color: #1b5e20;
+            color: #ffffff;
+            padding: 14px 20px;
+            text-align: center;
+            border-bottom: 5px solid #cddc39;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 26px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .header-banner p {
+            margin: 4px 0 0 0;
+            font-size: 15px;
+            opacity: 0.95;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            height: calc(100% - 105px);
+            overflow: hidden;
+        }
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+        }
+        /* Aumentada a transparência dos cards/tabelas para 45% */
+        .card {
+            background: rgba(255, 255, 255, 0.45);
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid #1b5e20;
+        }
+        .table-card {
+            flex: 1;
+            overflow-y: auto;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1b5e20;
+            margin-top: 0;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #2e7d32;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #2e7d32;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: 1px solid #1b5e20;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        td {
+            padding: 7px 10px;
+            text-align: center;
+            border: 1px solid #bdc3c7;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        /* Fonte consideravelmente maior e em negrito para a Coluna A */
+        .coluna-a td {
+            font-size: 17px !important;
+            font-weight: 800 !important;
+            padding: 9px 10px;
+        }
+        tr:nth-child(even) td {
+            background-color: rgba(240, 244, 241, 0.25);
+        }
+        .highlight-blue {
+            background-color: rgba(187, 222, 251, 0.55) !important;
+            color: #0d47a1;
+        }
+        .highlight-red {
+            background-color: rgba(255, 205, 205, 0.65) !important;
+            color: #b71c1c !important;
+        }
+        /* Transparência das caixas de texto ajustada para 45% */
+        .legal-box {
+            background-color: rgba(255, 253, 231, 0.45);
+            border-left: 5px solid #fbc02d;
+            padding: 12px;
+            font-size: 13.5px;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .legal-title {
+            font-weight: bold;
+            color: #f57f17;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .footer-note {
+            font-size: 12px;
+            color: #2c3e50;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="header-banner">
+            <h1>Maceteiro (2026)</h1>
+            <p>Painel de Referência de Idades e Obrigações do Serviço Militar — PRM 11/001 Brasília-DF</p>
+        </div>
+
+        <div class="main-content">
+            <!-- COLUNA 1 (ESQUERDA): CLASSES DE 2008 A 1999 COM LETRAS BEM MAIORES -->
+            <div class="column">
+                <div class="card table-card" style="flex: 0.85;">
+                    <div class="card-title">Alistamento Regular (Classes de 2008 até 1999)</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ano Nasc.</th>
+                                <th>Idade</th>
+                                <th>Alistamento Até 30 Jun</th>
+                                <th>OBS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-blue coluna-a"><td>2008</td><td>18</td><td>2026</td><td>Classe do Ano</td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2007</td><td>19</td><td>2025</td><td></td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2006</td><td>20</td><td>2024</td><td></td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2005</td><td>21</td><td>2023</td><td></td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2004</td><td>22</td><td>2022</td><td></td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2003</td><td>23</td><td>31/ago./21</td><td>COVID</td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2002</td><td>24</td><td>30/set./20</td><td>COVID</td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2001</td><td>25</td><td>2019</td><td></td></tr>
+                            <tr class="highlight-blue coluna-a"><td>2000</td><td>26</td><td>2018</td><td></td></tr>
+                            <tr class="highlight-blue coluna-a"><td>1999</td><td>27</td><td>2017</td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="legal-box">
+                    <div class="legal-title">(*) RLSM - Maior de 30 Anos (PRC 11/2024)</div>
+                    <p style="margin: 0;">Cidadãos com mais de 29 anos no momento da incorporação serão dispensados por excesso de contingente.</p>
+                </div>
+
+                <div class="legal-box">
+                    <div class="legal-title">(**) Lei nº 4.375 (Lei do Serviço Militar)</div>
+                    <p style="margin: 0;"><strong>Art. 5º:</strong> A obrigação para com o Serviço Militar subsistirá até 31 de dezembro do ano em que o cidadão completar 45 anos.</p>
+                </div>
+            </div>
+
+            <!-- COLUNA 2 (DIREITA): OUTROS ANOS -->
+            <div class="column">
+                <div class="card table-card" style="flex: 1;">
+                    <div class="card-title">Dispensa e Desobrigados (Classes de 1998 até 1980)</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ano Nasc.</th>
+                                <th>Idade</th>
+                                <th>Alistamento Até 30 Jun</th>
+                                <th>OBS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1998</td><td>28</td><td>2016</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1997</td><td>29</td><td>2015</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1996</td><td>30</td><td>2014</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1995</td><td>31</td><td>2013</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1994</td><td>32</td><td>2012</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1993</td><td>33</td><td>2011</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1992</td><td>34</td><td>2010</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1991</td><td>35</td><td>2009</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1990</td><td>36</td><td>2008</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1989</td><td>37</td><td>2007</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1988</td><td>38</td><td>2006</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1987</td><td>39</td><td>2005</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1986</td><td>40</td><td>2004</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1985</td><td>41</td><td>2003</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1984</td><td>42</td><td>2002</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1983</td><td>43</td><td>2001</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1982</td><td>44</td><td>2000</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr><td>1981</td><td>45</td><td>1999</td><td>(*) Maior de 29 Anos</td></tr>
+                            <tr class="highlight-red"><td>1980</td><td>46</td><td>1998</td><td>(**) DESOBRIGADO</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Olavo Bilac - Patrono do Serviço Militar
+        </div>
+    </div>
+
+</body>
+</html>
